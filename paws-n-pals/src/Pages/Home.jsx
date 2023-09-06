@@ -19,13 +19,13 @@ const Home = () => {
           <h1 className='text-5xl mb-2  text-emerald-900 text-center'>Paws n Pals</h1>
           <p className='text-center'>More than a pet, they're family</p>
 
-          <button onclick={()=>{ window.CommandBar.trackEvent("2695", {})}}>Launch</button>
+          
 
 
 
           <p className='w-9/12 mt-6 text-center'>a Website built by kentravious colson to show the capabilities of integrating command bar into an application</p>
 
-
+    <p className='mt-5 text-emerald-800'>hit <span className='font-extrabold text-emerald-900'>ctrl/cmd + k</span> to bring up command bar</p>  
         </section>
        
       {/* about section */}
@@ -42,7 +42,7 @@ const Home = () => {
 
       <div className='   w-full h-full col-span-3 '>
       <section className=' flex flex-col items-center justify-evenly mt-24'>
-        <h2 className='font-bold text-emerald-400 mb-12'>Wanna become a sitter</h2>  
+        <h2 className='font-bold text-emerald-400 mb-12'>Want to become a sitter?</h2>  
       </section>
       <section className=' w-full  '>
         

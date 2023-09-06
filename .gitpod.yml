@@ -1,0 +1,6 @@
+# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
+tasks:
+  - name: install and run
+    init: cd paws-n-pals && yarn
+    command: yarn dev
+ 
