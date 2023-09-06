@@ -3,18 +3,18 @@ import React from 'react'
 
 export const treats = [ 
     {
-        title:'treat0',
-        imgUrl: '/public/treats/Treat0.jpg',
+        title:'BoneKakes',
+        imgUrl: '/treats/Treat0.jpg',
         description:'  description'
     },
     {
-        title:'treat1',
-        imgUrl: '/public/treats/treat1.jpg',
+        title:'Nibblers',
+        imgUrl: '/treats/treat1.jpg',
         description:'  description'
     },
     {
-        title:'treat1',
-        imgUrl: '/public/treats/treat2.jpg',
+        title:'Stickies',
+        imgUrl: '/treats/treat2.jpg',
         description:' description'
     }, 
 ]

@@ -4,16 +4,16 @@ export const dogs = [
    
   {
     title:'sparky',
-    imgUrl: '/public/dogPics/doggie(two).jpg',
+    imgUrl: '/dogPics/doggie(two).jpg',
     description:' description'
   },{
     title:'Neion',
-    imgUrl: '/public/dogPics/doggie(three).jpg',
+    imgUrl: '/dogPics/doggie(three).jpg',
     description:' description'
   },
   {
     title:'Killer',
-    imgUrl: '/public/dogPics/doggie(four).jpg',
+    imgUrl: '/dogPics/doggie(four).jpg',
     description:'description'
 },
 ]
