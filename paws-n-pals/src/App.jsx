@@ -119,8 +119,11 @@ const Root = () => {
         },
        icon: 'link'
       });
+
     }
   }, []);
+  const openAnnouncement = window.CommandBar.trackEvent("openAnnouncement", {})
+  
   return(
     <>
     <header className=' bg-emerald-700 flex justify-between w-full p-6 top-0 left-0 sticky z-50 text-white px-12'>
@@ -131,7 +134,7 @@ const Root = () => {
           <Link to='/food' className='mr-4'>Food</Link>
           <Link to='/Adopt' className='mr-4'>Adopt a pet</Link>
           <Link to='/Sitter' className='mr-4'>Sitter</Link>
-         
+         <button onclick={openAnnouncement}>test</button>
 
     </div>
   </header>

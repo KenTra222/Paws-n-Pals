@@ -43,7 +43,7 @@ const Form = () => {
                       className='bg-emerald-800 rounded-md text-white hover:bg-black  w-full h-12 mt-8 text-2xl' 
                       type="submit" 
                    
-                      onClick={() => setConfirmed(!confirmed)}>Submit</button>
+                      onClick={() => {setConfirmed(!confirmed) }}>Submit</button>
             </form> }
 
             {confirmed && <ThankYou setConfirmed={setConfirmed} />}
