@@ -4,7 +4,7 @@ const Form = () => {
  const [confirmed, setConfirmed] = useState(false)
   return (
      
-         <div className='   bg-zinc-100 flex items-center justify-center text-lg '>
+         <div className='   bg-zinc-200 flex items-center justify-center text-lg '>
           <section className='mx-auto w-full'>
 
            {!confirmed && <form className='px-4 py-2 mx-auto flex flex-col items-center justify-center  '>
@@ -19,6 +19,15 @@ const Form = () => {
             </div>
 
             <div className='mb-3 flex flex-col w-full'>
+              <label htmlFor="phoneNumber" >Email</label>
+              <input 
+                name='phoneNumber'
+                className="w-full border border-gray-400 rounded-md" 
+                type="text" 
+                placeholder='Johndoe@email.com' />
+            </div>
+
+            <div className='mb-3 flex flex-col w-full'>
               <label htmlFor="phoneNumber" >Phone Number</label>
               <input 
                 name='phoneNumber'
@@ -29,21 +38,9 @@ const Form = () => {
                 maxLength={16}/>
             </div>
 
-            <section className='flex justify-between w-full gap-4'>
-
-                    <div className='mb-3 flex  flex-col   '>
-                      <label>Exp. Date (MM/YY)</label>
-                      
-                      <input 
-                        className='bg-none border border-gray-400 rounded-md flex-1' 
-                        type="month" 
-                         />
-                    </div>
-
-                
-                    </section>
+             
                   <button 
-                      className='bg-emerald-800 rounded-md text-white hover:bg-black  w-full h-12' 
+                      className='bg-emerald-800 rounded-md text-white hover:bg-black  w-full h-12 mt-8 text-2xl' 
                       type="submit" 
                    
                       onClick={() => setConfirmed(!confirmed)}>Submit</button>
