@@ -19,6 +19,10 @@ const Home = () => {
           <h1 className='text-5xl mb-2  text-emerald-900 text-center'>Paws n Pals</h1>
           <p className='text-center'>More than a pet, they're family</p>
 
+          <div onclick="window.CommandBar.open()">Launch</div>
+
+
+
           <p className='w-9/12 mt-6 text-center'>a Website built by kentravious colson to show the capabilities of integrating command bar into an application</p>
         </section>
        

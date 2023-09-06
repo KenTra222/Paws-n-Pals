@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -15,8 +15,23 @@ import Adopt from './Pages/Adopt'
 import Food from './Pages/Food'
 import Sitter from './Pages/Sitter'
 
+import { init } from 'commandbar';
+init('9a6d16ff');
 
-function App({title, description, imgUrl, index}) {
+
+function App({title, description, imgUrl, index, children}) {
+  
+  useEffect(() => {
+    const loggedInUserId = '12345'; // example
+    window.CommandBar.boot(loggedInUserId).then(() => {
+      // ...
+    });
+
+    return () => {
+      window.CommandBar.shutdown();
+    }
+  }, []);
+
 
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -33,8 +48,11 @@ function App({title, description, imgUrl, index}) {
   
 
   return (
+    
     <div className='flex flex-col w-full h-screen'>
         <RouterProvider router={router} />
+        <div onclick="window.CommandBar.open()">Launch</div>
+
     </div>
   )
 }
