@@ -21,20 +21,6 @@ init('9a6d16ff');
 
 function App({title, description, imgUrl, index, children}) {
   
-  useEffect(() => {
-    const loggedInUserId = '12345'; // example
-    window.CommandBar.boot(loggedInUserId, {}, {
-      formFactor: {
-        type: 'inline',
-        rootElement: 'commandbar-inline-root'
-      }
-    });
-    
-
-    return () => {
-      window.CommandBar.shutdown();
-    }
-  }, []);
 
 
   const router = createBrowserRouter(
@@ -54,8 +40,7 @@ function App({title, description, imgUrl, index, children}) {
   return (
     
     <div className='flex flex-col w-full h-screen'>
-      <button onclick="window.CommandBar.open()">Launch</button>
-
+     
         <RouterProvider router={router} />
         
 
@@ -66,6 +51,76 @@ function App({title, description, imgUrl, index, children}) {
 export default App
 
 const Root = () => {
+  
+  useEffect(() => {
+    const loggedInUserId = '9a6d16ff';
+    window.CommandBar.boot(loggedInUserId, {}, {
+   
+    });
+    
+    return () => {
+      window.CommandBar.shutdown();
+
+      window.CommandBar.addCommand({
+        text: 'Go to About Page',
+        name: 'go_to_about_page',
+        arguments: {},
+        template: {
+          type: 'link',
+          value: 'https://paws-n-pals.vercel.app/about',
+          operation: 'blank',
+        },
+       icon: 'link'
+      });
+
+      window.CommandBar.addCommand({
+        text: 'Go to Food Page',
+        name: 'go_to_food_page',
+        arguments: {},
+        template: {
+          type: 'link',
+          value: 'https://paws-n-pals.vercel.app/food',
+          operation: 'blank',
+        }
+      });
+
+      window.CommandBar.addCommand({
+        text: 'Go to Abopt Page',
+        name: 'go_to_abopt_page',
+        arguments: {},
+        template: {
+          type: 'link',
+          value: 'https://paws-n-pals.vercel.app/Adopt',
+          operation: 'blank',
+        },
+       icon: 'link'
+      });
+
+      window.CommandBar.addCommand({
+        text: 'Go to Abopt Page',
+        name: 'go_to_abopt_page',
+        arguments: {},
+        template: {
+          type: 'link',
+          value: 'https://paws-n-pals.vercel.app/Adopt',
+          operation: 'blank',
+        },
+       icon: 'link'
+      });
+
+      window.CommandBar.addCommand({
+        text: 'Return Home',
+        name: 'return_home',
+        arguments: {},
+        template: {
+          type: 'link',
+          value: 'https://paws-n-pals.vercel.app/',
+          operation: 'blank',
+        },
+       icon: 'link'
+      });
+    }
+  }, []);
   return(
     <>
     <header className=' bg-emerald-700 flex justify-between w-full p-6 top-0 left-0 sticky z-50 text-white px-12'>
@@ -76,6 +131,8 @@ const Root = () => {
           <Link to='/food' className='mr-4'>Food</Link>
           <Link to='/Adopt' className='mr-4'>Adopt a pet</Link>
           <Link to='/Sitter' className='mr-4'>Sitter</Link>
+         
+
     </div>
   </header>
     
