@@ -19,6 +19,7 @@ export const dogs = [
 ]
 
 const Adopt = () => {
+
   return (
   <section  className='overflow-y-scroll mt-12'>
 
