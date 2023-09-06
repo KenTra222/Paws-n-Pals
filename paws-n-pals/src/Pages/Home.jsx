@@ -1,9 +1,6 @@
 import React from 'react'
 import Form from '../Components/Form'
-
-import { init } from 'commandbar';
-init('9a6d16ff');
-
+ 
 
 
 const Home = () => {
