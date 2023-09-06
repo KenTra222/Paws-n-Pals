@@ -23,9 +23,13 @@ function App({title, description, imgUrl, index, children}) {
   
   useEffect(() => {
     const loggedInUserId = '12345'; // example
-    window.CommandBar.boot(loggedInUserId).then(() => {
-      // ...
+    window.CommandBar.boot(loggedInUserId, {}, {
+      formFactor: {
+        type: 'inline',
+        rootElement: 'commandbar-inline-root'
+      }
     });
+    
 
     return () => {
       window.CommandBar.shutdown();
@@ -50,8 +54,10 @@ function App({title, description, imgUrl, index, children}) {
   return (
     
     <div className='flex flex-col w-full h-screen'>
+      <button onclick="window.CommandBar.open()">Launch</button>
+
         <RouterProvider router={router} />
-        <div onclick="window.CommandBar.open()">Launch</div>
+        
 
     </div>
   )
